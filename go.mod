@@ -1,4 +1,4 @@
-module github.com/Above-the-Garage/spwnnmark
+module spwnnmark
 
 go 1.18
 

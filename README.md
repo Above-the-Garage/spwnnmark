@@ -18,3 +18,6 @@ gcp e2-micro (you only get 20 second bursts then very slow) Elapsed time 42m59.5
 Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.
 The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 useless hyperthreaded ones) and costs a bit over $8.00 / hour.
 Go Graviton 3!
+
+Why is the raspberry pi 2b faster than the 3?  I'm guessing it's because I'm using 32-bit Go.  
+I suspect the "3" optimizes for 64-bit code rather than 32-bit code.

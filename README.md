@@ -1,6 +1,6 @@
 Spwnnmark - use spwnn for benchmarking parallel machine performance
 
-Various Results:
+Various Results (go.1.18.6):
 ```
 aws c7g.16xlarge                                            Elapsed time     6.121933222s; GOMAXPROCS 64
 aws r6i.32xlarge                                            Elapsed time     7.193731471s; GOMAXPROCS 128

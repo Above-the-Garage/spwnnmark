@@ -9,6 +9,7 @@ Intel 7700HQ                                                Elapsed time  1m24.8
 Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz                     Elapsed time  1m31.449798500s; GOMAXPROCS 4
 aws t4g.small (plenty of CPU credits)                       Elapsed time  3m06.854805956s; GOMAXPROCS 2
 aws t3a.nano (plenty of CPU credits)                        Elapsed time  5m00.691448894s; GOMAXPROCS 2
+Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time  8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time 12m04.827775875s; GOMAXPROCS 2
 raspberry pi 2b                                             Elapsed time 20m16.867081494s; GOMAXPROCS 4
 raspberry pi 3                                              Elapsed time 23m22.680746919s; GOMAXPROCS 4

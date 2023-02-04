@@ -21,4 +21,4 @@ Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.
 The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 useless hyperthreaded ones) is Intel and costs a bit over $8.00 / hour.
 Go Graviton 3!
 
-Why is the raspberry pi 2b faster than the 3?  I'm guessing it's because of 32-bit Go.  
+Why is the raspberry pi 2b faster than the 3?  I'm guessing it's because of 32-bit Go and 32-bit code optimization was the design goal of the 2b CPU.

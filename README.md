@@ -11,6 +11,7 @@ aws t4g.small (plenty of CPU credits)                       Elapsed time  3m06.8
 aws t3a.nano (plenty of CPU credits)                        Elapsed time  5m00.691448894s; GOMAXPROCS 2
 Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time  8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time 12m04.827775875s; GOMAXPROCS 2
+raspberry pi 3  bullseye 64-bit golang 1.15                 Elapsed time 19m49.630674793s; GOMAXPROCS 4
 raspberry pi 2b buster 32-bit                               Elapsed time 20m16.867081494s; GOMAXPROCS 4
 raspberry pi 3  buster 32-bit                               Elapsed time 23m22.680746919s; GOMAXPROCS 4
 gcp e2-micro (you only get 20 second bursts then very slow) Elapsed time 42m59.583750118s; GOMAXPROCS 2
@@ -20,5 +21,4 @@ Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.
 The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 useless hyperthreaded ones) is Intel and costs a bit over $8.00 / hour.
 Go Graviton 3!
 
-Why is the raspberry pi 2b faster than the 3?  I'm guessing it's because I'm using 32-bit Go.  
-I suspect the "3" optimizes for 64-bit code rather than 32-bit code.
+Why is the raspberry pi 2b faster than the 3?  I'm guessing it's because of 32-bit Go.  

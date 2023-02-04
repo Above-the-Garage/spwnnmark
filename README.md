@@ -11,8 +11,8 @@ aws t4g.small (plenty of CPU credits)                       Elapsed time  3m06.8
 aws t3a.nano (plenty of CPU credits)                        Elapsed time  5m00.691448894s; GOMAXPROCS 2
 Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time  8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time 12m04.827775875s; GOMAXPROCS 2
-raspberry pi 2b                                             Elapsed time 20m16.867081494s; GOMAXPROCS 4
-raspberry pi 3                                              Elapsed time 23m22.680746919s; GOMAXPROCS 4
+raspberry pi 2b buster 32-bit                               Elapsed time 20m16.867081494s; GOMAXPROCS 4
+raspberry pi 3  buster 32-bit                               Elapsed time 23m22.680746919s; GOMAXPROCS 4
 gcp e2-micro (you only get 20 second bursts then very slow) Elapsed time 42m59.583750118s; GOMAXPROCS 2
 ```
 

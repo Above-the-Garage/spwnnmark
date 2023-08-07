@@ -10,6 +10,7 @@ AMD Ryzen 7 1700X Eight-Core Processor 3.40 GHz             Elapsed time      44
 Intel 7700HQ                                                Elapsed time    1m24.816407300s; GOMAXPROCS 4
 Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz                     Elapsed time    1m31.449798500s; GOMAXPROCS 4
 aws t4g.small (plenty of CPU credits)                       Elapsed time    3m06.854805956s; GOMAXPROCS 2
+aws t3a.small (plenty of CPU credits)                       Elapsed time    3m12.382426106s; GOMAXPROCS 2
 aws t3a.nano (plenty of CPU credits)                        Elapsed time    5m00.691448894s; GOMAXPROCS 2
 Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time    8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time   12m04.827775875s; GOMAXPROCS 2

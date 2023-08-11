@@ -7,6 +7,7 @@ aws r6i.32xlarge (Intel)                                    Elapsed time       7
 aws m7i.48xlarge (Intel)                                    Elapsed time       8.156488503s; GOMAXPROCS 192 (go 1.9.3)
 Intel i9-12900H 2.50 GHz (6 HT p-cores; 8 e-cores)          Elapsed time      18.647013700s; GOMAXPROCS 20
 AMD Ryzen 7 1700X Eight-Core Processor 3.40 GHz             Elapsed time      44.689435500s; GOMAXPROCS 8
+t4g.2xlarge (ARM)                                           Elapsed time      49.708390402s; GOMAXPROCS 8
 Intel 7700HQ                                                Elapsed time    1m24.816407300s; GOMAXPROCS 4
 Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz                     Elapsed time    1m31.449798500s; GOMAXPROCS 4
 aws t4g.small (plenty of CPU credits)                       Elapsed time    3m06.854805956s; GOMAXPROCS 2
@@ -23,6 +24,7 @@ raspberry pi zero w bullseye 32-bit go 1.8.4)               Elapsed time 1h50m21
 ```
 
 Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.
+The t4g.2xlarge is pretty bad-ass Graviton - 8 real cores that an burst up for 9 hours.  You an get a lot done on that!  $200/month.
 The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 useless hyperthreaded ones) is Intel and costs a bit over $8.00 / hour.
 Go Graviton 3!
 

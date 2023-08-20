@@ -15,6 +15,7 @@ aws t4g.small (Graviton2, plenty of CPU credits)            Elapsed time    3m06
 Intel N4120 @ 1.1GHz                                        Elapsed time    4m12.856900000s; GOMAXPROCS 4
 aws t3a.nano (plenty of CPU credits)                        Elapsed time    5m00.691448894s; GOMAXPROCS 2
 aws t3a.small (plenty of CPU credits)                       Elapsed time    5m09.107800250s; GOMAXPROCS 2
+raspberry pi 4 B                                            Elapsed time    5m14.034612514s; GOMAXPROCS 4
 Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time    8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time   12m04.827775875s; GOMAXPROCS 2
 raspberry pi 3  bullseye 64-bit golang 1.15                 Elapsed time   19m49.630674793s; GOMAXPROCS 4
@@ -32,5 +33,7 @@ The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 use
 Go Graviton 3!
 
 The Intel N4120 is in a $250 Lenovo 2-in-1 laptop.  That level of performance is a bit shocking for such a cheap system.
+
+Go Raspberry Pi 4 B
 
 Why is the raspberry pi 2b faster than the 3 for 32-bit code?  I'm guessing it's because of 32-bit Go and 32-bit code optimization was the design goal of the 2b CPU.  (And there is no 64-bit Raspberry Pi OS for the 2b.)

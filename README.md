@@ -3,6 +3,7 @@ Spwnnmark - use spwnn for benchmarking parallel machine performance
 Various Results (go.1.18.6 unless otherwise noted):
 ```
 aws c7g.16xlarge (Graviton3)                                Elapsed time       6.121933222s; GOMAXPROCS 64
+aws m7i-24large (Intel)                                     Elapsed time       6.966997985s; GOMAXPROCS 96
 aws r6i.32xlarge (Intel)                                    Elapsed time       7.193731471s; GOMAXPROCS 128
 aws m7i.48xlarge (Intel)                                    Elapsed time       8.156488503s; GOMAXPROCS 192 (go 1.9.3)
 Intel i9-12900H 2.50 GHz (6 HT p-cores; 8 e-cores)          Elapsed time      18.647013700s; GOMAXPROCS 20
@@ -12,7 +13,9 @@ t4g.2xlarge (Graviton2)                                     Elapsed time      49
 r7g.xlarge (Graviton3)                                      Elapsed time    1m06.859180419s; GOMAXPROCS 4
 Intel 7700HQ                                                Elapsed time    1m24.816407300s; GOMAXPROCS 4
 Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz                     Elapsed time    1m31.449798500s; GOMAXPROCS 4
+aws m7i-flex.xlarge                                         Elapsed time    1m32.732027200s; GOMAXPROCS 4
 aws t4g.small (Graviton2, plenty of CPU credits)            Elapsed time    3m06.854805956s; GOMAXPROCS 2
+aws c6i.xlarge (Intel)                                      Elapsed time    1m51.21501840s0; GOMAXPROCS 4
 Intel N4120 @ 1.1GHz                                        Elapsed time    4m12.856900000s; GOMAXPROCS 4
 aws t3a.nano (plenty of CPU credits)                        Elapsed time    5m00.691448894s; GOMAXPROCS 2
 aws t3a.small (plenty of CPU credits)                       Elapsed time    5m09.107800250s; GOMAXPROCS 2

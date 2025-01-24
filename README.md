@@ -17,7 +17,7 @@ aws m7i-flex.xlarge                                         Elapsed time    1m32
 aws c5.xlarge                                               Elapsed time    2m07.145813700s; GOMAXPROCS 4
 aws t4g.small (Graviton2, plenty of CPU credits)            Elapsed time    3m06.854805956s; GOMAXPROCS 2
 aws c6i.xlarge (Intel)                                      Elapsed time    1m51.21501840s0; GOMAXPROCS 4
-raspberry pi 5                                              Elapsed time    2m10.768008128s; GOMAXPROCS 4
+raspberry pi 5                                              Elapsed time    2m10.768008128s; GOMAXPROCS 4 (go 1.19.8)
 Intel N4120 @ 1.1GHz                                        Elapsed time    4m12.856900000s; GOMAXPROCS 4
 aws t3a.nano (plenty of CPU credits)                        Elapsed time    5m00.691448894s; GOMAXPROCS 2
 aws t3a.small (plenty of CPU credits)                       Elapsed time    5m09.107800250s; GOMAXPROCS 2

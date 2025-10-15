@@ -2,12 +2,14 @@ Spwnnmark - use spwnn for benchmarking parallel machine performance
 
 Various Results (go.1.18.6 unless otherwise noted):
 ```
+aws c8i-96xlarge (Intel 2nd run)                            Elapsed time       1.052941535s; GOMAXPROCS 384 (go 1.25)
 aws c8g.24xlarge (Graviton4)                                Elapsed time       4.170948890s; GOMAXPROCS 96
 aws c7g.16xlarge (Graviton3)                                Elapsed time       6.121933222s; GOMAXPROCS 64
 aws m7i-24large (Intel)                                     Elapsed time       6.966997985s; GOMAXPROCS 96
 aws r6i.32xlarge (Intel)                                    Elapsed time       7.193731471s; GOMAXPROCS 128
 aws m7i.48xlarge (Intel)                                    Elapsed time       8.156488503s; GOMAXPROCS 192 (go 1.9.3)
 Intel i9-14900 KF (24 real cores + 8 fake HT cores)         Elapsed time       9.207274300s; GOMAXPROCS 32
+aws c8i-96xlarge (Intel 1st run)                            Elapsed time       9.970260764s; GOMAXPROCS 384 (go 1.25)
 Intel i9-12900H 2.50 GHz (6 HT p-cores; 8 e-cores)          Elapsed time      18.647013700s; GOMAXPROCS 20
 AMD Ryzen 9 5900HX (HT)                                     Elapsed time      34.299816600s; GOMAXPROCS 16
 AMD Ryzen 7 1700X Eight-Core Processor 3.40 GHz             Elapsed time      44.689435500s; GOMAXPROCS 8
@@ -36,6 +38,11 @@ raspberry pi zero w bullseye 32-bit go 1.8.4)               Elapsed time 1h50m21
 
 Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.
 The c8g.24xlarge is about $4.00 / hour.  There is a 48xlarge version but none were available in my AZ when I tried to launch one.  :)
+
+The c8i-96xlarge with 384 vCPUs is very slow (well, almost ten seconds) on the first run and blast through the entire dictionary in
+under one second on the second run.  The way the code works to make this embarassingly parallel is to load the dictionary in each 
+core (or pseudo core) dynamically on the first run.  So the first run includes the dictionary creation.  The second run uses all the
+cores simultaneously with the only likely contention being memory contention and so blasts through the test.
 
 The t4g.2xlarge is pretty bad-ass Graviton - 8 real cores that an burst up for 9 hours.  You an get a lot done on that!  $200/month.
 The rci.32xlarge with 128 virtual cores (but really only 64 real ones and 64 useless hyperthreaded ones) is Intel and costs a bit over $8.00 / hour.

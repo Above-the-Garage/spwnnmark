@@ -4,6 +4,7 @@ Package main - spwnncli
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"runtime"
@@ -19,8 +20,9 @@ import (
 //
 
 var (
-	mu    sync.Mutex
-	dicts []*spwnn.SpwnnDictionary
+	mu           sync.Mutex
+	dicts        []*spwnn.SpwnnDictionary
+	dictFilename string
 )
 
 // Manage a set of dictionaries, growing the list on demand
@@ -36,7 +38,7 @@ func getDict() *spwnn.SpwnnDictionary {
 			return res
 		}
 	}
-	newDict := spwnn.ReadDictionary("knownWords.txt", false)
+	newDict := spwnn.ReadDictionary(dictFilename, false)
 	return newDict
 }
 
@@ -101,9 +103,11 @@ func benchmarkParallel(words []string, input string, noisy bool) {
 }
 
 func main() {
+	dictFlag := flag.String("dict", "knownWords.txt", "dictionary file to use")
+	flag.Parse()
 
-	dict := spwnn.ReadDictionary("knownWords.txt", true)
+	dictFilename = *dictFlag
+	dict := spwnn.ReadDictionary(dictFilename, true)
 	benchmarkParallel(dict.Words(), "" /* entire dictionary */, true)
 	os.Exit(0)
-
 }

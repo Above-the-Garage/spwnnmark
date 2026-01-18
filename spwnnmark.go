@@ -36,7 +36,7 @@ func getDict() *spwnn.SpwnnDictionary {
 			return res
 		}
 	}
-	newDict := spwnn.ReadDictionary(false)
+	newDict := spwnn.ReadDictionary("knownWords.txt", false)
 	return newDict
 }
 
@@ -102,8 +102,8 @@ func benchmarkParallel(words []string, input string, noisy bool) {
 
 func main() {
 
-	dict := spwnn.ReadDictionary(true)
-	benchmarkParallel(spwnn.GetWords(dict), "" /* entire dictionary */, true)
+	dict := spwnn.ReadDictionary("knownWords.txt", true)
+	benchmarkParallel(dict.Words(), "" /* entire dictionary */, true)
 	os.Exit(0)
 
 }

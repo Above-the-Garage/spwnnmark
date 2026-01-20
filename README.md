@@ -30,12 +30,12 @@ aws t3a.small (plenty of CPU credits)                       Elapsed time    5m09
 raspberry pi 4 B                                            Elapsed time    5m14.034612514s; GOMAXPROCS 4
 Intel(R) N3350 2 cores @ 1.10GHz (Chromebook)               Elapsed time    8m31.797251343s; GOMAXPROCS 2
 Intel(R) Atom(TM) Processor E3930 @ 1.30GHz                 Elapsed time   12m04.827775875s; GOMAXPROCS 2
-raspberry pi 3  bullseye 64-bit golang 1.15                 Elapsed time   19m49.630674793s; GOMAXPROCS 4
+raspberry pi 3  bullseye 64-bit                             Elapsed time   19m49.630674793s; GOMAXPROCS 4 (go 1.15)
 raspberry pi 2b buster 32-bit & bullseye 32-bit             Elapsed time   20m16.867081494s; GOMAXPROCS 4
 raspberry pi 3  buster 32-bit                               Elapsed time   23m22.680746919s; GOMAXPROCS 4
 gcp e2-micro (you only get 20 second bursts then very slow) Elapsed time   42m59.583750118s; GOMAXPROCS 2
-raspberry pi 3 w bullseye 32-bit go.1.8.4                   Elapsed time 1h03m46.311928563s; GOMAXPROCS 1
-raspberry pi zero w bullseye 32-bit go 1.8.4)               Elapsed time 1h50m21.238283491s; GOMAXPROCS 1
+raspberry pi 3 w bullseye 32-bit                            Elapsed time 1h03m46.311928563s; GOMAXPROCS 1 (go.1.8.4)
+raspberry pi zero w bullseye 32-bit)                        Elapsed time 1h50m21.238283491s; GOMAXPROCS 1 (go 1.8.4)
 ```
 
 Amusingly the c7g.16xlarge is a Graviton 3 and costs a bit over $2.00 / hour.

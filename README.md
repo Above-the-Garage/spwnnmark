@@ -12,6 +12,7 @@ Intel i9-14900 KF (24 real cores + 8 fake HT cores)         Elapsed time       9
 aws c8i-96xlarge (Intel 1st run)                            Elapsed time       9.970260764s; GOMAXPROCS 384 (go 1.24.4)
 Intel i9-12900H 2.50 GHz (6 HT p-cores; 8 e-cores)          Elapsed time      18.647013700s; GOMAXPROCS 20
 AMD Ryzen 5 9600X (HT)                                      Elapsed time      19.979691000s; GOMAXPROCS 12
+AMD Ryzen 7 5800XT (HT)                                     Elapsed time      21.837505800s; GOMAXPROCS 16
 AMD Ryzen 9 5900HX (HT)                                     Elapsed time      34.299816600s; GOMAXPROCS 16
 AMD Ryzen 7 1700X Eight-Core Processor 3.40 GHz             Elapsed time      44.689435500s; GOMAXPROCS 8
 t4g.2xlarge (Graviton2)                                     Elapsed time      49.708390402s; GOMAXPROCS 8

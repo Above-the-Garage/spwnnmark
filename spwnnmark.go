@@ -40,7 +40,7 @@ func getDict() *spwnn.SpwnnDictionary {
 			return res
 		}
 	}
-	newDict := spwnn.ReadDictionary(dictFilename, false)
+	newDict := spwnn.ReadDictionary(dictFilename)
 	return newDict
 }
 
@@ -124,7 +124,9 @@ func main() {
 	fmt.Printf("Pair scoring: %s; length match: %s\n", *scoringFlag, *lengthFlag)
 
 	dictFilename = *dictFlag
-	dict := spwnn.ReadDictionary(dictFilename, true)
+	loadStart := time.Now()
+	dict := spwnn.ReadDictionary(dictFilename)
+	fmt.Printf("%d words in dictionary, loaded in %v\n", dict.WordCount(), time.Since(loadStart).Round(time.Millisecond))
 	benchmarkParallel(dict.Words(), "" /* entire dictionary */, true)
 	os.Exit(0)
 }
